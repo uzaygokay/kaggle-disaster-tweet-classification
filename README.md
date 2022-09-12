@@ -23,7 +23,7 @@ Project Organization
     │   │   ├── bert
     │   │   └── gan-bert
     │
-    └── LICENSE           <- Licence file.
+    └── LICENSE           <- License file.
 
 
 --------
