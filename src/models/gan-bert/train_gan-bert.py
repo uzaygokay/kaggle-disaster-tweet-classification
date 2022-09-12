@@ -15,7 +15,15 @@ from torch.utils.data import TensorDataset, DataLoader, RandomSampler, Sequentia
 #!pip install torch==1.7.1+cu101 torchvision==0.8.2+cu101 -f https://download.pytorch.org/whl/torch_stable.html
 #!pip install sentencepiece
 
-##Set random values
+import parameters 
+
+
+#%%data paths
+train_path = ''
+test_path = ''
+unlabeled_path = ''
+
+#%%Set random values
 seed_val = 42
 random.seed(seed_val)
 np.random.seed(seed_val)
@@ -36,3 +44,6 @@ else:
     device = torch.device("cpu")
 
 #%%
+transformer = AutoModel.from_pretrained(parameters.model_name)
+tokenizer = AutoTokenizer.from_pretrained(parameters.model_name)
+
